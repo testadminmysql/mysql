@@ -1,3 +1,4 @@
 django
 django-rest-framework
 mysqlclient
+django_tables2

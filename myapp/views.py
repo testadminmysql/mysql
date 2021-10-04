@@ -7,7 +7,10 @@ from rest_framework import status
 from myapp.models import employees
 from myapp.serializers import EmployeeSerializer
 from rest_framework.decorators import api_view
-
+def display(request):
+    st=employees.objects.all() # Collect all records from table 
+    print(st)
+    return render(request,'display.html',{'st':st})
 
 @api_view(['GET', 'POST', 'DELETE'])
 def employee(request):

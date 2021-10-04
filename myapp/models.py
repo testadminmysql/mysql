@@ -9,3 +9,4 @@ class employees(models.Model):
     phone_number = models.CharField(max_length=200,blank=False, default='')
     hire_date = models.CharField(max_length=200,blank=False, default='')
     
+    

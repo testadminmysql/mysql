@@ -1,0 +1,41 @@
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<center><h1>Employees Data</h1></center>
+<table id="customers">
+<th>Id</th><th>FirstName</th> <th>LastName</th><th>Email</th><th>PhoneNumber</th><th>HireDate</th>
+{% for sts in st %}
+
+<tr>
+<td>{{sts.id}}</td>
+<td>{{sts.first_name}}
+<td> {{sts.last_name}}</td>
+<td> {{sts.email}} </td>
+<td>{{sts.phone_number}}</td>
+<td>{{sts.hire_date}}</td></tr>
+{% endfor %}
+</table>
